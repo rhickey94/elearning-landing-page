@@ -52,6 +52,8 @@
   --heading-m: bolder 32px/40px "Plus Jakarta Sans";
   --heading-s: bolder 24px/28px "Plus Jakarta Sans";
 
+  --heading-header: bolder 28px "Plus Jakarta Sans";
+
   --body-m: medium 18px/28px "Plus Jakarta Sans";
   --body-s: bold 16px/28px "Plus Jakarta Sans";
 }

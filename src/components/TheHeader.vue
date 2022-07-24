@@ -18,7 +18,6 @@ console.log(mq);
 </template>
 <style lang="scss" scoped>
 .landing-header {
-  background-color: lightblue;
   padding: 16px;
   display: flex;
   align-items: center;

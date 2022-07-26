@@ -53,7 +53,7 @@ const cssVars = computed(() => {
   border: none;
   border-radius: 28px;
   font: var(--body-m);
-  color: var(--color-button-text);
+  color: var(--vt-c-white);
 }
 .button:hover {
   background: var(--bg-color-hover);

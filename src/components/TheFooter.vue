@@ -6,7 +6,7 @@ const mq = useMq();
 console.log(mq);
 </script>
 <template>
-  <header class="landing-footer">
+  <footer class="landing-footer">
     <div class="company-name">skilled</div>
     <BasicButton
       :bg-color="3"
@@ -18,19 +18,20 @@ console.log(mq);
     <BasicButton :bg-color="3" width="167px" height="56px" v-if="mq.desktop"
       >Get Started</BasicButton
     >
-  </header>
+  </footer>
 </template>
 <style lang="scss" scoped>
 .landing-footer {
-  background-color: var(--color-footer);
-  color: var(--color-footer-text);
+  background-color: var(--vt-c-dark-blue);
+  color: var(--vt-c-white);
   padding: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 120px;
 }
 .company-name {
-  font: var(--heading-header);
+  font: 800 28px "Plus Jakarta Sans";
 }
 
 @media screen and (min-width: 1440px) {

@@ -24,7 +24,7 @@ console.log(mq);
   justify-content: space-between;
 }
 .company-name {
-  font: var(--heading-header);
+  font: 800 28px "Plus Jakarta Sans";
 }
 
 @media screen and (min-width: 1440px) {

@@ -5,7 +5,9 @@
   --vt-c-gray: #83869a;
   --vt-c-hot-pink: #f74780;
   --vt-c-pink: #ffa7c3;
+
   --vt-c-white: #ffffff;
+  --vt-c-off-white: #F0F1FF;
 
   --vt-g-start-1: #ff6f48;
   --vt-g-end-1: #f02aa6;
@@ -25,11 +27,7 @@
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-footer: var(--vt-c-dark-blue);
-  --color-footer-text: var(--vt-c-white);
-
-  --color-button-text: var(--vt-c-white);
+  --color-background: linear-gradient(var(--vt-c-white), var(--vt-c-off-white));
 
   --color-button-1: var(--vt-c-dark-blue);
   --color-button-1-hover: var(--vt-c-muted-blue);
@@ -45,19 +43,19 @@
     var(--vt-g-start-2-hover),
     var(--vt-g-end-2-hover)
   );
+
+  --color-product-cta: linear-gradient(var(--vt-g-start-1), var(--vt-g-end-1));
 }
 
 /* semantic font variables for this project */
 :root {
-  --heading-xl: bolder 56px/70px "Plus Jakarta Sans";
-  --heading-l: bolder 40px/51px "Plus Jakarta Sans";
-  --heading-m: bolder 32px/40px "Plus Jakarta Sans";
-  --heading-s: bolder 24px/28px "Plus Jakarta Sans";
+  --heading-xl: 800 56px/70px "Plus Jakarta Sans";
+  --heading-l: 800 40px/51px "Plus Jakarta Sans";
+  --heading-m: 800 32px/40px "Plus Jakarta Sans";
+  --heading-s: 800 24px/32px "Plus Jakarta Sans";
 
-  --heading-header: bolder 28px "Plus Jakarta Sans";
-
-  --body-m: medium 18px/28px "Plus Jakarta Sans";
-  --body-s: bold 16px/28px "Plus Jakarta Sans";
+  --body-m: 500 18px/28px "Plus Jakarta Sans";
+  --body-s: 500 16px/26px "Plus Jakarta Sans";
 }
 
 *,
@@ -71,7 +69,6 @@
 
 body {
   min-height: 100vh;
-  background: var(--color-background);
   font-family: "Plus Jakarta Sans", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

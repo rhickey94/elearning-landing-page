@@ -9,7 +9,6 @@ defineProps({
     required: true,
   },
   imageLink: {
-    type: String,
     required: true,
   },
 });

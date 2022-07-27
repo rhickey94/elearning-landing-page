@@ -8,35 +8,35 @@ const products = [
     title: "Animation",
     textContent: `Learn the latest animation techniques to create stunning motion
             design and captivate your audience.`,
-    imageLink: "../src/assets/icon-animation.svg",
+    imageLink: "/icon-animation.svg",
   },
   {
     id: 2,
     title: "Design",
     textContent: `Create beautiful, usable interfaces to help shape the future of how
             the web looks.`,
-    imageLink: "../src/assets/icon-design.svg",
+    imageLink: "/icon-design.svg",
   },
   {
     id: 3,
     title: "Photography",
     textContent: `Explore critical fundamentals like lighting, composition, and focus
             to capture exceptional photos.`,
-    imageLink: "../src/assets/icon-photography.svg",
+    imageLink: "/icon-photography.svg",
   },
   {
     id: 4,
     title: "Crypto",
     textContent: `All you need to know to get started investing in crypto. Go from
 beginner to advanced with this 54 hour course.`,
-    imageLink: "../src/assets/icon-crypto.svg",
+    imageLink: "/icon-crypto.svg",
   },
   {
     id: 5,
     title: "Business",
     textContent: `A step-by-step playbook to help you start, scale, and sustain your
 business without outside investment.`,
-    imageLink: "../src/assets/icon-business.svg",
+    imageLink: "/icon-business.svg",
   },
 ];
 </script>

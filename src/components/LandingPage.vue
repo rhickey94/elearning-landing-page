@@ -53,19 +53,7 @@ business without outside investment.`,
           >Get Started</BasicButton
         >
       </article>
-      <article class="hero-banner">
-        <picture>
-          <source
-            media="(min-width:1440px)"
-            srcset="../assets/image-hero-desktop.png"
-          />
-          <source
-            media="(min-width:768px)"
-            srcset="../assets/image-hero-tablet.png"
-          />
-          <img src="../assets/image-hero-mobile.png" alt="hero" />
-        </picture>
-      </article>
+      <article class="hero-banner"></article>
     </section>
     <section class="product-information">
       <div class="product-cta">
@@ -83,17 +71,16 @@ business without outside investment.`,
 </template>
 <style lang="scss" scoped>
 main {
-  padding: 22px 16px;
+  padding: 30px 16px;
   background: var(--color-background);
 }
 .hero-cta {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  margin-bottom: 48px;
 }
 .hero-cta-text {
-  margin-bottom: 46px;
+  margin-top: 46px;
   max-width: 398px;
   h1 {
     font: var(--heading-l);
@@ -106,12 +93,13 @@ main {
   }
 }
 .hero-banner {
-  box-shadow: -85px 120px 63px -120px rgba(0, 0, 0, 0.66);
+  height: 293px;
   width: 327px;
-  display: flex;
-  justify-content: center;
+  background-image: url("../assets/image-hero-mobile.png");
+  background-size: auto;
+  background-position: top -28px left -54px;
+  background-repeat: no-repeat;
   overflow: hidden;
-  height: 321px;
 }
 .product-information {
   margin: 0 auto 50px;
@@ -135,20 +123,18 @@ main {
 
 @media screen and (min-width: 768px) {
   .hero-cta {
-    margin-bottom: 93px;
+    margin-bottom: 193px;
   }
-  // .hero-banner {
-  //   height: 448px;
-  //   width: 320px;
-  //   overflow: visible;
-  //   position: relative;
-  //   // clip-path: inset(10px 274px 4px 26px);
-  //   picture {
-  //     position: absolute;
-  //     left: -55px;
-  //     top: -175px;
-  //   }
-  // }
+  .hero-cta-text {
+    padding-left: 17px;
+  }
+  .hero-banner {
+    height: 640px;
+    width: 640px;
+    background-image: url("../assets/image-hero-tablet.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
   .product-information {
     gap: 32px 11px;
   }
@@ -158,16 +144,25 @@ main {
     }
   }
 }
-// @media screen and (min-width: 1440px) {
-//   .product-information {
-//     gap: 56px 30px;
-//     margin: 0 auto 118px;
-//   }
-//   .product-cta {
-//     h2 {
-//       // margin-top: 28px;
-//       font: var(--heading-m);
-//     }
-//   }
-// }
+@media screen and (min-width: 1440px) {
+  .hero-cta-text {
+    padding-left: 0px;
+  }
+  .hero-banner {
+    height: 640px;
+    width: 640px;
+    background-image: url("../assets/image-hero-desktop.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  .product-information {
+    gap: 56px 30px;
+    margin: 0 auto 118px;
+  }
+  .product-cta {
+    h2 {
+      font: var(--heading-m);
+    }
+  }
+}
 </style>

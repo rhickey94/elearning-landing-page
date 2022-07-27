@@ -15,22 +15,21 @@ defineProps({
 });
 </script>
 <template>
-  <main>
-    <article class="product-card">
-      <div class="card-container">
-        <img :src="imageLink" alt="animation" />
-        <h3>{{ title }}</h3>
-        <p>
-          {{ textContent }}
-        </p>
-        <a href="/">Get Started</a>
-      </div>
-    </article>
-  </main>
+  <article class="product-card">
+    <div class="card-container">
+      <img :src="imageLink" alt="animation" />
+      <h3>{{ title }}</h3>
+      <p>
+        {{ textContent }}
+      </p>
+      <a href="/">Get Started</a>
+    </div>
+  </article>
 </template>
 <style lang="scss" scoped>
 .product-card {
   margin-top: 26px;
+  max-width: 340px;
 }
 
 .card-container {
@@ -61,6 +60,25 @@ defineProps({
     text-decoration: none;
     color: var(--vt-c-hot-pink);
     font: 700 18px/28px "Plus Jakarta Sans";
+  }
+}
+@media screen and (min-width: 1440px) {
+  .product-card {
+    max-width: 350px;
+  }
+
+  .card-container {
+    padding: 32px 32px 40px 32px;
+    height: 100%;
+    h3 {
+      font: 800 24px "Plus Jakarta Sans";
+    }
+    p {
+      font: 500 18px/28px "Plus Jakarta Sans";
+    }
+    a:hover {
+      color: var(--vt-c-pink);
+    }
   }
 }
 </style>

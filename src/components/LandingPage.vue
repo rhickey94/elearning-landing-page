@@ -54,11 +54,23 @@ business without outside investment.`,
         >
       </article>
       <article class="hero-banner">
-        <img src="../assets/image-hero-mobile.png" alt="hero" />
+        <picture>
+          <source
+            media="(min-width:1440px)"
+            srcset="../assets/image-hero-desktop.png"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="../assets/image-hero-tablet.png"
+          />
+          <img src="../assets/image-hero-mobile.png" alt="hero" />
+        </picture>
       </article>
     </section>
     <section class="product-information">
-      <h2>Check out our most popular courses!</h2>
+      <div class="product-cta">
+        <h2>Check out our most popular courses!</h2>
+      </div>
       <ProductCard
         v-for="product in products"
         :key="product.id"
@@ -75,10 +87,14 @@ main {
   background: var(--color-background);
 }
 .hero-cta {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
   margin-bottom: 66px;
 }
 .hero-cta-text {
   margin-bottom: 46px;
+  max-width: 398px;
   h1 {
     font: var(--heading-l);
     margin-bottom: 26px;
@@ -90,63 +106,64 @@ main {
   }
 }
 .hero-banner {
+  box-shadow: -95px 120px 63px -120px rgba(0, 0, 0, 0.66);
+  width: 327px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   overflow: hidden;
-  width: 328px;
-  height: 302px;
-  img {
-    // max-width: 100%;
-    // max-height: 100%;
+  height: 321px;
+  picture {
+    clip-path: inset();
   }
+  // img {
+  //   // max-width: 100%;
+  //   // max-height: 100%;
+  // }
 }
 .product-information {
+  margin: 0 auto 50px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1110px;
   gap: 16px;
-  h2 {
-    background: var(--color-product-cta);
-    color: var(--vt-c-white);
-    font: 800 24px/32px "Plus Jakarta Sans";
-    padding: 28px;
-    border-radius: 10px;
-  }
 }
-.product-card {
-  margin-top: 26px;
-}
-
-.card-container {
-  position: relative;
-  background: var(--vt-c-white);
-  padding: 28px 28px 32px 28px;
+.product-cta {
+  background: var(--color-product-cta);
+  color: var(--vt-c-white);
+  padding: 28px;
   border-radius: 10px;
-  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  max-width: 340px;
+  margin-top: 24px;
+  h2 {
+    font: 800 24px/32px "Plus Jakarta Sans";
+  }
+}
 
-  img {
-    position: absolute;
-    top: -24px;
-    left: 24px;
-    z-index: 100;
+@media screen and (min-width: 768px) {
+  .hero-cta {
+    margin-bottom: 93px;
   }
-  h3 {
-    margin-top: 28px;
-    color: var(--vt-c-dark-blue);
-    font: 800 20px "Plus Jakarta Sans";
-    margin-bottom: 16px;
+  .product-information {
+    gap: 32px 11px;
   }
-  p {
-    color: var(--vt-c-gray);
-    font: 500 16px/26px "Plus Jakarta Sans";
-    margin-bottom: 24px;
+  .product-cta {
+    h2 {
+      margin-top: 28px;
+    }
   }
-  a {
-    text-decoration: none;
-    color: var(--vt-c-hot-pink);
-    font: 700 18px/28px "Plus Jakarta Sans";
+}
+@media screen and (min-width: 1440px) {
+  .product-information {
+    gap: 56px 30px;
+    margin: 0 auto 118px;
+  }
+  .product-cta {
+    h2 {
+      // margin-top: 28px;
+      font: var(--heading-m);
+    }
   }
 }
 </style>

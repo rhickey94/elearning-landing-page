@@ -23,6 +23,7 @@ console.log(mq);
   padding: 16px;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 .header-container {
   display: flex;

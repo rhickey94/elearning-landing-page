@@ -123,12 +123,18 @@ main {
 
 @media screen and (min-width: 768px) {
   .hero-cta {
+    margin: 0 auto;
     margin-bottom: 193px;
+    display: block;
+    max-width: 1110px;
   }
   .hero-cta-text {
     padding-left: 17px;
   }
   .hero-banner {
+    position: absolute;
+    top: -200px;
+    left: 350px;
     height: 640px;
     width: 640px;
     background-image: url("../assets/image-hero-tablet.png");
@@ -145,10 +151,15 @@ main {
   }
 }
 @media screen and (min-width: 1440px) {
+  .hero-cta {
+    margin-bottom: 193px;
+  }
   .hero-cta-text {
     padding-left: 0px;
   }
   .hero-banner {
+    top: -300px;
+    left: 500px;
     height: 640px;
     width: 640px;
     background-image: url("../assets/image-hero-desktop.png");
